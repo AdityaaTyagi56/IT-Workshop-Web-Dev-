@@ -685,20 +685,12 @@ img {
 }
 
 .hero-title {
-  font-size: 5rem;
-  font-weight: 900;
-  color: var(--accent-light);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
   margin-bottom: var(--spacing-lg);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, var(--text-primary), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-decoration: underline;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 .hero-subtitle {
@@ -912,11 +904,7 @@ img {
 
 /* Specific styling for Our Initiatives title */
 #initiatives .section-title {
-  color: #90EE90; /* Light green color */
-  background: linear-gradient(135deg, #90EE90, #32CD32); /* Light green gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .initiatives-tabs {
@@ -1142,16 +1130,12 @@ img {
 
 /* Specific styling for About NSS title */
 #about .section-title {
-  color: #90EE90; /* Light green color */
-  background: linear-gradient(135deg, #90EE90, #32CD32); /* Light green gradient */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 /* Specific styling for IIIT-NR NSS Unit heading */
 .about-nss h4 {
-  color: #90EE90 !important; /* Light green color */
+  color: var(--text-primary);
 }
 
 .about-content {
@@ -1183,62 +1167,27 @@ img {
 .motto-container {
   text-align: center;
   margin: var(--spacing-xl) 0;
-  padding: var(--spacing-xl);
-  background: linear-gradient(135deg, var(--bg-transparent), rgba(22, 188, 50, 0.05));
-  border-radius: 20px;
+  padding: var(--spacing-2xl);
+  background: var(--bg-transparent);
+  border-radius: var(--radius-xl);
   border: 2px solid var(--primary-color);
   position: relative;
   overflow: hidden;
 }
 
-.motto-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, transparent, rgba(101, 205, 15, 0.1), transparent);
-  animation: mottoShine 3s ease-in-out infinite;
-}
-
 .motto-quote {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: var(--primary-color);
   font-style: italic;
   margin: 0;
-  text-shadow: 0 6px 12px rgba(13, 232, 148, 0.4);
   position: relative;
   z-index: 1;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  animation: mottoPulse 2s ease-in-out infinite;
-  background: linear-gradient(45deg, var(--primary-color), var(--accent-color), var(--primary-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
-@keyframes mottoShine {
-  0%, 100% {
-    transform: translateX(-100%);
-  }
-  50% {
-    transform: translateX(100%);
-  }
-}
 
-@keyframes mottoPulse {
-  0%, 100% {
-    transform: scale(1);
-    filter: brightness(1);
-  }
-  50% {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-  }
-}
 
 /* Objectives Styling */
 .objectives-container {
@@ -1463,10 +1412,7 @@ blockquote {
   color: var(--lower-text-primary);
   margin-bottom: var(--spacing-sm);
   font-size: 1.125rem;
-  font-weight: 800;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+  font-weight: 600;
 }
 
 .contact-details p {
@@ -1481,10 +1427,7 @@ blockquote {
 .social-links h3 {
   color: var(--lower-text-primary);
   margin-bottom: var(--spacing-lg);
-  font-weight: 800;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+  font-weight: 600;
 }
 
 .social-icons {
@@ -1515,8 +1458,9 @@ blockquote {
 .contact-form {
   background: var(--bg-primary);
   padding: var(--spacing-2xl);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-medium);
+  border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -1535,18 +1479,19 @@ blockquote {
   width: 100%;
   padding: var(--spacing-md);
   border: 2px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   font-family: inherit;
   font-size: 1rem;
-  transition: border-color var(--transition-fast);
-  background: var(--bg-primary);
+  transition: all var(--transition-fast);
+  background: var(--bg-secondary);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 3px rgba(135, 169, 107, 0.1);
 }
 
 .form-group textarea {
